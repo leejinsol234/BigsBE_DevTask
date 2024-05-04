@@ -17,11 +17,11 @@ public class WeatherInfo {
     private String TMP;
     private String fcstDate;
     private String fcstTime;
-    private double fcstValue;
+    private String fcstValue;
     private int nx;
     private int ny;
 
-    public WeatherInfo(Long id, String baseDate, String baseTime, String TMP, String fcstDate, String fcstTime, double fcstValue, int nx, int ny){
+    public WeatherInfo(Long id, String baseDate, String baseTime, String TMP, String fcstDate, String fcstTime, String fcstValue, int nx, int ny){
         this.id = id;
         this.baseDate = baseDate;
         this.baseTime = baseTime;

@@ -1,4 +1,4 @@
-package bigs.task.models;
+package bigs.task;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,10 +7,11 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
+
 public class ApiExplorer {
     public static void main(String[] args) throws IOException {
         StringBuilder urlBuilder = new StringBuilder("http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst"); /*URL*/
-        urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=SYqMED65kHfPPEEip3qvKv1AIn0Kcp8tUs2XJUQQ0fh0AGeo6TT5FXVZjibSRMxc1bcVvEFvhJpKniU6rucqMg%3D%3D"); /*Service Key*/
+        urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "SYqMED65kHfPPEEip3qvKv1AIn0Kcp8tUs2XJUQQ0fh0AGeo6TT5FXVZjibSRMxc1bcVvEFvhJpKniU6rucqMg=="); /*Service Key*/
         urlBuilder.append("&" + URLEncoder.encode("pageNo","UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /*페이지번호*/
         urlBuilder.append("&" + URLEncoder.encode("numOfRows","UTF-8") + "=" + URLEncoder.encode("1000", "UTF-8")); /*한 페이지 결과 수*/
         urlBuilder.append("&" + URLEncoder.encode("dataType","UTF-8") + "=" + URLEncoder.encode("XML", "UTF-8")); /*요청자료형식(XML/JSON) Default: XML*/
